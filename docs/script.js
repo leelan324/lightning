@@ -77,11 +77,14 @@
         var km3 = km2.toFixed(1);
         //表示
         if(distance < 100000){
+            //100000m未満のときはm表示する
             distm.textContent = distance2 + 'm';
         }else{
+            //100kmを超えるときはkm表示のみ
             distm.style.fontSize = "36px";
             distm.textContent = '[距離が長すぎます]';
         }
+        //km表示
         distkm.textContent = '(' + km3 + 'km' + ')';
     }
 
